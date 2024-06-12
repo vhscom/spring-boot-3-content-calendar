@@ -4,6 +4,7 @@ import com.vhsdev.contentcalendar.model.Content;
 import com.vhsdev.contentcalendar.repository.ContentCollectionRepository;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,5 +21,10 @@ public class ContentController {
   @GetMapping("")
   public List<Content> findAll() {
     return repository.findAll();
+  }
+
+  @GetMapping("/{id}")
+  public Content findById(@PathVariable Integer id) {
+    return repository.findById(id).orElse(null);
   }
 }
