@@ -12,7 +12,7 @@ public class Application {
     ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 
     // Handy trick for getting a list of all the Beans in the application context
-    // Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+    Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
     // IntelliJ IDEA has a built-in feature for this, but it's still a handy trick to know.
   }
 
