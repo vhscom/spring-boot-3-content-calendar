@@ -1,0 +1,20 @@
+### Find all content
+GET http://localhost:8080/api/v1/content
+
+### Get content by id
+GET http://localhost:8080/api/v1/content/1
+
+### Create content
+POST http://localhost:8080/api/v1/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "Another Spring Boot",
+  "description": "Spring Boot is a Java framework",
+  "status": "PUBLISHED",
+  "contentType": "ARTICLE",
+  "dateCreated": "2024-06-12T14:43:30.503622",
+  "dateUpdated": null,
+  "url": "https://spring.io/projects/spring-boot"
+}
