@@ -15,16 +15,17 @@ public class Application {
 
 
   public static void main(String[] args) {
-    ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+    SpringApplication.run(Application.class, args);
+    //ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 
     // Handy trick for getting a list of all the Beans in the application context
-    Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+    //Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
     // IntelliJ IDEA has a built-in feature for this, but it's still a handy trick to know.
 
     // You can also get a specific Bean by name
     // We cast the Bean to a RestTemplate because we know that's what it is
-    RestTemplate restTemplate = (RestTemplate) context.getBean("restTemplate");
-    log.info("RestTemplate Bean: {}", restTemplate);
+    //RestTemplate restTemplate = (RestTemplate) context.getBean("restTemplate");
+    //log.info("RestTemplate Bean: {}", restTemplate);
   }
 
 }
