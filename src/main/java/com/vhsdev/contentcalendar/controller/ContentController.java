@@ -42,11 +42,9 @@ public class ContentController {
   }
 
   public void update(@RequestBody Content content, @PathVariable Integer id) {
-    repository.findById(id).ifPresentOrElse(
-        c -> repository.save(content),
-        () -> {
-          throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found");
-        }
-    );
+    if (!repository.existsById(id)) {
+      throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found");
+    }
+    repository.save(content);
   }
 }

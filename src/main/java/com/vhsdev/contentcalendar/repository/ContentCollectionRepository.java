@@ -30,6 +30,10 @@ public class ContentCollectionRepository {
     contentList.add(content);
   }
 
+  public boolean existsById(Integer id) {
+    return contentList.stream().anyMatch(c -> c.id().equals(id));
+  }
+
   @PostConstruct
   private void init() {
     Content c = new Content(
