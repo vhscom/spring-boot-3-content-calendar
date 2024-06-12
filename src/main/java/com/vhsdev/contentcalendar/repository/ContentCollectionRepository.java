@@ -27,6 +27,9 @@ public class ContentCollectionRepository {
   }
 
   public void save(Content content) {
+    // Remove content with the same id if it exists. This is to simulate an update operation.
+    // In a real-world application, you would use a database to store the content.
+    contentList.removeIf(c -> c.id().equals(content.id()));
     contentList.add(content);
   }
 

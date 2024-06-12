@@ -18,3 +18,18 @@ Content-Type: application/json
   "dateUpdated": null,
   "url": "https://spring.io/projects/spring-boot"
 }
+
+### Update existing content
+PUT http://localhost:8080/api/v1/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "SPRING BOOT",
+  "description": "SPRING BOOT",
+  "status": "DRAFT",
+  "contentType": "ARTICLE",
+  "dateCreated": "2024-06-12T14:43:30.503622",
+  "dateUpdated": "2024-06-12T14:43:30.503622",
+  "url": ""
+}
