@@ -4,6 +4,9 @@ GET http://localhost:8080/api/v1/content
 ### Get content by id
 GET http://localhost:8080/api/v1/content/1
 
+### Show 404 for invalid content id
+GET http://localhost:8080/api/v1/content/100
+
 ### Create content
 POST http://localhost:8080/api/v1/content
 Content-Type: application/json
@@ -33,3 +36,6 @@ Content-Type: application/json
   "dateUpdated": "2024-06-12T14:43:30.503622",
   "url": ""
 }
+
+### Delete content
+DELETE http://localhost:8080/api/v1/content/2

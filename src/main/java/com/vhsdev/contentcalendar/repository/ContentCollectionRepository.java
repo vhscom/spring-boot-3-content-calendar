@@ -51,4 +51,8 @@ public class ContentCollectionRepository {
     );
     contentList.add(c);
   }
+
+  public void deleteById(Integer id) {
+    contentList.removeIf(c -> c.id().equals(id));
+  }
 }
