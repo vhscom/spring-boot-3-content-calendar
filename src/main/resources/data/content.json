@@ -1,0 +1,35 @@
+[
+  {
+    "id": null,
+    "title": "Spring Boot",
+    "description": "Spring Boot is a Java framework",
+    "status": "PUBLISHED",
+    "contentType": "ARTICLE",
+    "dateCreated": "2024-06-13T00:00:00.000000",
+    "dateUpdated": null,
+    "author": null,
+    "url": "https://spring.io/projects/spring-boot"
+  },
+  {
+    "id": null,
+    "title": "React",
+    "description": "React is a JavaScript library",
+    "status": "IDEA",
+    "contentType": "ARTICLE",
+    "dateCreated": "2024-06-13T00:00:00.000000",
+    "dateUpdated": null,
+    "author": null,
+    "url": "https://reactjs.org/"
+  },
+  {
+    "id": null,
+    "title": "Vue.js",
+    "description": "Vue.js is a JavaScript framework",
+    "status": "PUBLISHED",
+    "contentType": "VIDEO",
+    "dateCreated": "2024-06-13T00:00:00.000000",
+    "dateUpdated": null,
+    "author": null,
+    "url": "https://vuejs.org/"
+  }
+]
