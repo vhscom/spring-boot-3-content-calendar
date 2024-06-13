@@ -1,5 +1,6 @@
 package com.vhsdev.contentcalendar;
 
+import com.vhsdev.contentcalendar.config.ContentCalendarProperties;
 import com.vhsdev.contentcalendar.model.Content;
 import com.vhsdev.contentcalendar.model.Status;
 import com.vhsdev.contentcalendar.model.Type;
@@ -11,15 +12,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+@EnableConfigurationProperties(ContentCalendarProperties.class)
 @SpringBootApplication
 public class Application {
 
   private static final Logger log = LoggerFactory.getLogger(Application.class);
-
 
   public static void main(String[] args) {
     SpringApplication.run(Application.class, args);

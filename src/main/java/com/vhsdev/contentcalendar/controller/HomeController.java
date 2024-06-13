@@ -1,13 +1,20 @@
 package com.vhsdev.contentcalendar.controller;
 
+import com.vhsdev.contentcalendar.config.ContentCalendarProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
 
+  private final ContentCalendarProperties properties;
+
+  public HomeController(ContentCalendarProperties properties) {
+    this.properties = properties;
+  }
+
   @GetMapping("/")
-  public String home() {
-    return null;
+  public ContentCalendarProperties home() {
+    return properties;
   }
 }
