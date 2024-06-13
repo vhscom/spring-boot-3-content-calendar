@@ -1,10 +1,12 @@
 package com.vhsdev.contentcalendar.controller;
 
 import com.vhsdev.contentcalendar.model.Content;
-import com.vhsdev.contentcalendar.repository.ContentCollectionRepository;
+import com.vhsdev.contentcalendar.model.Status;
 import com.vhsdev.contentcalendar.repository.ContentRepository;
 import jakarta.validation.Valid;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,6 +24,8 @@ import org.springframework.web.server.ResponseStatusException;
 @RequestMapping("/api/v1/content")
 @CrossOrigin
 public class ContentController {
+
+  private static final Logger log = LoggerFactory.getLogger(ContentController.class);
 
   private final ContentRepository repository;
 
@@ -68,5 +72,12 @@ public class ContentController {
   @GetMapping("/filter/{keyword}")
   public List<Content> findByKeyword(@PathVariable String keyword) {
     return repository.findAllByTitleContains(keyword);
+  }
+
+  @GetMapping("/filter/status/{status}")
+  public List<Content> findByStatus(@PathVariable String status) {
+    Status newStatus = Status.valueOf(status);
+    log.info("Status: {}", newStatus);
+    return repository.listByStatus(newStatus);
   }
 }
