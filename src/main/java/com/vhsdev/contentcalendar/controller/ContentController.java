@@ -2,6 +2,7 @@ package com.vhsdev.contentcalendar.controller;
 
 import com.vhsdev.contentcalendar.model.Content;
 import com.vhsdev.contentcalendar.repository.ContentCollectionRepository;
+import com.vhsdev.contentcalendar.repository.ContentRepository;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -22,9 +23,9 @@ import org.springframework.web.server.ResponseStatusException;
 @CrossOrigin
 public class ContentController {
 
-  private final ContentCollectionRepository repository;
+  private final ContentRepository repository;
 
-  public ContentController(ContentCollectionRepository repository) {
+  public ContentController(ContentRepository repository) {
     this.repository = repository;
   }
 
