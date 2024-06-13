@@ -37,43 +37,43 @@ public class Application {
     //log.info("RestTemplate Bean: {}", restTemplate);
   }
 
-  @Bean
-  CommandLineRunner seedDatabase(ContentRepository repository) {
-    return args -> {
-      log.info("Seeding database with initial content");
-      repository.saveAll(Arrays.asList(
-          new Content(
-              null,
-              "Spring Boot",
-              "Spring Boot is a Java framework",
-              Status.PUBLISHED,
-              Type.ARTICLE,
-              LocalDateTime.now(),
-              null,
-              "https://spring.io/projects/spring-boot"
-          ),
-          new Content(
-              null,
-              "React",
-              "React is a JavaScript library",
-              Status.DRAFT,
-              Type.ARTICLE,
-              LocalDateTime.now(),
-              null,
-              "https://reactjs.org/"
-          ),
-          new Content(
-              null,
-              "Vue.js",
-              "Vue.js is a JavaScript framework",
-              Status.PUBLISHED,
-              Type.ARTICLE,
-              LocalDateTime.now(),
-              null,
-              "https://vuejs.org/"
-          )
-      ));
-    };
-  }
+//  @Bean
+//  CommandLineRunner seedDatabase(ContentRepository repository) {
+//    return args -> {
+//      log.info("Seeding database with initial content");
+//      repository.saveAll(Arrays.asList(
+//          new Content(
+//              null,
+//              "Spring Boot",
+//              "Spring Boot is a Java framework",
+//              Status.PUBLISHED,
+//              Type.ARTICLE,
+//              LocalDateTime.now(),
+//              null,
+//              "https://spring.io/projects/spring-boot"
+//          ),
+//          new Content(
+//              null,
+//              "React",
+//              "React is a JavaScript library",
+//              Status.DRAFT,
+//              Type.ARTICLE,
+//              LocalDateTime.now(),
+//              null,
+//              "https://reactjs.org/"
+//          ),
+//          new Content(
+//              null,
+//              "Vue.js",
+//              "Vue.js is a JavaScript framework",
+//              Status.PUBLISHED,
+//              Type.ARTICLE,
+//              LocalDateTime.now(),
+//              null,
+//              "https://vuejs.org/"
+//          )
+//      ));
+//    };
+//  }
 
 }
