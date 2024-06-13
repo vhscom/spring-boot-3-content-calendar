@@ -39,3 +39,6 @@ Content-Type: application/json
 
 ### Delete content
 DELETE http://localhost:8080/api/v1/content/2
+
+### Test keyword filtering
+GET http://localhost:8080/api/v1/content/filter/Spring
