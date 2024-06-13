@@ -64,4 +64,9 @@ public class ContentController {
     }
     repository.deleteById(id);
   }
+
+  @GetMapping("/filter/{keyword}")
+  public List<Content> findByKeyword(@PathVariable String keyword) {
+    return null;
+  }
 }
