@@ -10,5 +10,5 @@ create table if not exists content
     url          text
 );
 
-insert into content (title, description, status, content_type, date_created)
-values ('How to make a cake', 'This is a recipe for a cake', 'IDEA', 'ARTICLE', current_timestamp);
+-- insert into content (title, description, status, content_type, date_created)
+-- values ('How to make a cake', 'This is a recipe for a cake', 'IDEA', 'ARTICLE', current_timestamp);
